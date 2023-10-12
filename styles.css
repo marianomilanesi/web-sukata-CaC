@@ -1,0 +1,24 @@
+/* no entiendo por que no se aplican los bordes */
+
+table,
+th,
+td{
+    border: solid green;
+}
+
+/* para expandir la imagen de contacti */
+
+.imagen-expansible {
+    text-align: center;
+}
+
+#mi-imagen {
+    width: 200px; /* Tamaño inicial de la imagen */
+    transition: width 0.5s; /* Animación de transición suave */
+}
+
+#boton-expandir {
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* ------------------------------------------------- */
