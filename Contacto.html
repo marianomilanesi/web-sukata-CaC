@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukata Fight Club</title>
     <link rel="icon" href="img/ico_perro.ico">
 </head>
+
 <body>
     <header>
         <img src="https://sukatabjj.com/img/logosukata.png" alt="Logo Sukata">
@@ -15,13 +17,49 @@
             <a href="index.html">Inicio</a>
             <a href="profesores.html">profesores</a>
             <a href="horarios.html">Horarios</a>
-            <a href="Contacto.html">Contacto</a>
             <a href="historia.html">Historia</a>
+            <a href="Contacto.html">Contacto</a>
         </nav>
 
     </header>
 
     <main>
+        <!-- Seccion contacto con formulario -->
+
+        <section> <!-- Seccion formulario -->
+            <fieldset>
+                <!-- nombre y apellido -->
+                <legend>Datos de contacto</legend>
+                <label for="lbl_nom">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre completo"><br>
+
+                <label for="lbl_ape">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido completo"><br>
+
+                <!-- Horario de clase -->
+                <label for="lbl_horario">Horario</label>
+                <input type="radio" name="rdb_Hmañana" id="1">Mañana
+                <input type="radio" name="rdb_Htarde" id="2">Tarde
+                <input type="radio" name="rdb_Hnoche" id="3">Noche <br>
+
+                <!-- caja de mensaje -->
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" cols="20" rows="4"></textarea>
+                <button type="submit">Enviar</button>
+            </fieldset>
+
+
+            </fieldset>
+        </section>
+
+        <!-- Seccion mapa -->
+        <section>
+            <h2>Ubicacion</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6166832093095!2d-58.448724600000006!3d-34.613853199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca16fdf45e23%3A0xc6f0c2dbfd76b026!2sPujol%20743%2C%20C1405ALE%20CABA!5e0!3m2!1sen!2sar!4v1697664747795!5m2!1sen!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
 
     </main>
 
@@ -30,13 +68,14 @@
             <h2>Contacto</h2>
             <ul>
                 <li><strong>Correo Electrónico:</strong> <a
-                        href="mailto:milanesimariano@gmail.com">milanesimariano@gmail.com</a></li>
-                <li><strong>Teléfono:</strong> +123456789</li>
-                <li><strong>Dirección:</strong> 123 Calle Ejemplo, Ciudad, País</li>
+                        href="mailto:sukatafightclub@gmail.com">sukatafightclub@gmail.com</a></li>
+                <li><strong>Teléfono:</strong> 1150576363</li>
+                <li><strong>Dirección:</strong> Pujol 743, Buenos Aires, Argentina</li>
             </ul>
         </section>
 
     </footer>
-    
+
 </body>
+
 </html>
