@@ -1,0 +1,472 @@
+ /*--------------------- PARA TODO EL SITIO--------------------- */
+
+ /* LETRA: La letra se estableció en color blanco con un selector universal para ques e vea sobre un fonde de página negro. Para otros colores e letra se establecen en selectores de mayor especificidad */
+* {
+    color: white;
+}
+
+/* COLOR DE FONDO: Color de fondo de página adaptado al logo y a la temática de la paágina*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+/* ÍCONOS DE REDES SOCIALES Y CONTACTOS: Para los íconos de todo el sitio se usó Font Awsome. Éstos representan los enlasces de las distintas vías de contacto del gimansio o de los profesores (instagram). Los íconos están animados de para que cuado pase el cursor se agranden */
+.mail,
+.telefono,
+.instagram,
+.ubicacion {
+    transition: transform 0.3s ease;
+}
+.mail:hover,
+.telefono:hover,
+.instagram:hover,
+.ubicacion:hover {
+    transform: scale(1.35);
+}
+
+/* TÍTULOS PRINCIPALES (H1) DE LOS DISTINTOS HTML*/
+.presentacion h1, .promocion h1, .contenedor_profesores h1, .tabla h1, .entrenamientos h1, .formulario h1, .mapa h1, .historia h1{
+    text-align: center;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 3vw;
+    margin-bottom: 20px;
+    border-bottom: 3px solid tomato;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+/* HEADER */
+/* Configuración del header. Se agrega animación al nombre del gimansio y se elije una letra de Google Fonts acorde al tipo de actividad que se desarrolla (fight). Se usó un display flex para poder ubicar los elementos. El color de la letra y del fondo del nombre del club se ajusta a los colores del logo*/
+.contenedor_titulo_header {
+    margin: 5%;
+    background-color: tomato;
+    border-radius: 10px;
+    border-color: black;
+    border-style: dotted;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+.contenedor_titulo_header span.animate__rubberBand {
+    font-family: 'Anton', sans-serif, 'Bebas Neue', sans-serif, 'Russo One', sans-serif, 'Titillium Web', sans-serif;
+    font-size: 3.5em;
+    color: black;
+}
+.logoder {
+    float: right;
+}
+.logoizq {
+    float: left;
+}
+/* El nav se lo crea con un contenedor de clase "navbar" para aplicar diseño con Grid*/
+.barra_nav {
+    display: grid;
+    margin: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: wheat;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+}
+/* Se usó flaticon para cada menú de la barra y tiene la misma animación que el nombre del gimansio */
+.barra_nav a img {
+    max-width: 10%;
+    height: auto;
+}
+/* Para el nav se eligen fuentes acordes, se saca el subrayado y se pone en mayúscula */
+.barra_nav a {
+    text-decoration: none;
+    font-family: impact, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    text-transform: uppercase;
+}
+/* Cambia el color de los textos del nav cuando se pasa el cursor por encima */
+.barra_nav a:hover {
+    color: tomato;
+}
+
+/* FOOTER */
+footer h1 {
+    text-align: center;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 1.4vw;
+    border-bottom: 2px dashed tomato;
+    padding-bottom: 1%;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+/* Para el footer se usa flexbox */
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 5%;
+    font-family: "calibri", arial;
+    font-size: 1.4vw;
+}
+
+ /*--------------------- PARA TODO EL HTML "INDEX" (INICIO)--------------------- */
+
+/* INICIO: SECCIÓN PRESENTACIÓN */
+/* Para la sección presentación se usa Grid  */
+.contenedor_presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+}
+/* La imagen tiene una animación que hace que se agrande suevemente cuando el cursosr pasa sobre la misma, pero sin desbordar el contenido de su contenedor */
+.contenedor_presentacion img {
+    grid-column: 1;
+    width: 70%;
+    height: auto;
+    margin-left: 10%;
+    transition: transform 0.3s ease;
+}
+.contenedor_presentacion:hover img {
+    transform: scale(1.35);
+    cursor: pointer;
+}
+.contenedor_presentacion p {
+    grid-column: 2;
+    font-size: 1.6vw;
+    font-family: "Hættenschweiler", "Times New Roman";
+    text-align: justify;
+    margin-right: 10%; 
+    overflow: hidden;
+}
+
+/* INICIO: SECCIÓN PROMOCIÓN */
+/* Para la sección promoción se usa Grid */
+.cinturones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 3%;
+    column-gap: 5%;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 1.2vw;
+}
+.cinturones h2 {
+    background-color: wheat;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    margin-right: 20%;
+}
+/* Al título de cada cinturón se le agrega una animación de cambio de fondo y tamaño del contenedor cuando se pasa el cursor por encima */
+.azul h2,
+.purpura h2,
+.marron h2,
+.negro h2 {
+    border-bottom: solid blue;
+    transition: transform 0.3s ease;
+    transition: background 0.5s ease;
+    cursor: pointer;
+}
+.azul div:hover h2,
+.purpura div:hover h2,
+.marron div:hover h2,
+.negro div:hover h2 {
+    transform: scale(1.35);
+    background-color: tomato;
+}
+/* A los contenedores de los títulos de cada citurón se les pone un margen inferior del color que representa cada uno de ellos */
+.purpura h2 {
+    border-bottom: solid purple;
+}
+.marron h2 {
+    border-bottom: solid brown;
+}
+.negro h2 {
+    border-bottom: solid black;
+}
+.contenedor_promocion p {
+    text-align: center;
+    color: tomato;
+    font-size: 1vw;
+    font-weight: bold;
+}
+/* se cambian el estilo de los elementos de la segunda lista desordenada (de técnicas) */
+.azul li,
+.purpura li,
+.marron li,
+.negro li {
+    list-style: disc;
+}
+/* se sacan los marcadores de la primera lista desordenada (cinturones) */
+.azul, .purpura, .marron, .negro {
+    list-style: none;
+}
+
+ /*--------------------- PARA TODO EL HTML "PROFESORES"--------------------- */
+
+/* Para los profesores se usa grid */
+.contenedor_tarjeta {
+    display: grid;
+    row-gap: 4%;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto, auto, auto, auto;
+    align-items: center;
+    border-bottom: 1px dashed tomato;
+    overflow: hidden;
+    margin: 2%;
+    border-radius: 5px;
+}
+.contenedor_tarjeta img {
+    grid-column: 1;
+    grid-row: span 4;
+    width: 60%;
+    height: auto;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+.contenedor_tarjeta h2 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 2vw;
+    color: tomato;
+    margin-left: 5%;
+    margin-right: 5%;
+    transition: background-color 0.3s ease;
+}
+.contenedor_tarjeta p {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 1.3vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.contenedor_tarjeta ul {
+    grid-column: 2;
+    grid-row: 3;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 1.3vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.contenedor_tarjeta a {
+    grid-column: 2;
+    grid-row: 4;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+/* Cuando pasa el cursor por el profesor el contenedor cambia de color de fondo y el nombre se agranda y los textos debajo del título cambian de color de letra */
+.contenedor_tarjeta:hover{
+	background-color: wheat;
+}
+.contenedor_tarjeta:hover h2{
+    font-size: 2.5vw;
+}
+.contenedor_tarjeta:hover p, .contenedor_tarjeta:hover li, .contenedor_tarjeta:hover a{
+    color: black;
+    font-weight: bold;
+}
+/* Cuando además de entrar al contenedor, me posiciono por encima de la foto, la misma tiene una animación que hace que se agrande suevementey el cursor se pone en pointer*/
+.contenedor_tarjeta img:hover {
+    transform: scale(1.35);
+    cursor: pointer;
+}
+
+ /*--------------------- PARA TODO EL HTML "HORARIOS"--------------------- */
+
+/* HORARIOS: SECCIÓN TABLA */
+.tabla{
+    margin-bottom: 0%;
+}
+.tabla table {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+.tabla table, th, td {
+    border: solid wheat;
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.3s ease;
+}
+/* Se configura la tabla para que las celdas tengan distintos colores */
+tr:nth-child(even) {
+    background-color: #34495E  ;
+}
+/* Se agrega animaciones a la tabla: al pasar el cursor por encima de la tabla se agrada un poco y cambia el colorde fondo y de letra cuando se pasa por encima de las celdas*/
+.tabla:hover table {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+th:hover, td:hover {
+    background-color: wheat;
+    color: black;
+}
+
+/* HORARIOS: SECCIÓN ENTRENAMIENTO */
+.entrenamientos{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    
+}
+.entrenamientos h2{
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 2vw;
+    color: tomato;
+    text-decoration: underline wavy;
+}
+.entrenamientos p, .entrenamientos li{
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 1.8vw;
+    text-align: justify;
+}
+.entrenamientos ul{
+    list-style-type: none;
+} 
+
+ /*--------------------- PARA TODO EL HTML "CONTACTO"--------------------- */
+
+/* CONTACTO: SECCIÓN FORMULARIOS */
+
+/* Se aplica estilos al fieldset y a los elementos del formulario dentro del fieldset: label, legend, los imputs y textarea y del botón submit */
+fieldset {
+    border: 2px solid #ff5733;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+fieldset label {
+    display: block;
+    margin-bottom: 1%;
+    font-weight: bold; 
+}
+fieldset legend {
+    display: block;
+    margin-bottom: 1%;
+    font-weight: bold; 
+    color: tomato;
+    font-size: larger;
+}
+fieldset input[type="text"], 
+fieldset textarea{
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+fieldset button[type="submit"] {
+    background-color: tomato;    
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    border: none;
+    padding: 1% 4%;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+/* CONTACTO: SECCIÓN MAPA */
+
+/* Se le da estilo para el iframe del mapa */
+.mapa iframe{
+    align-content: center;
+    width: 60%; 
+    border-radius: 10px; 
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+}
+
+/*--------------------- PARA TODO EL HTML "HISTORIA"--------------------- */
+
+.historia_frase{
+    text-align: center;
+    font-family: Impact, "Hættenschweiler", 'Arial Narrow Bold', sans-serif;
+    font-size: 2.4vw;
+    color: tomato;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.contenedor_historia{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    overflow: hidden;
+    padding: 5%;
+
+}
+.contenedor_historia img{
+    grid-column: 1;
+    grid-row: 1/span 2;
+    width:45vw;
+    height: auto;
+    border-radius: 5%;
+}
+.contenedor_historia .nombre{
+    grid-column: 2;
+    grid-row: 1;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 2.5vw;
+    border: solid tomato;
+    border-radius: 10%;
+    border-width:1.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+.contenedor_historia .cargo{
+    grid-row: 2;
+    grid-row:2;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 2.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+.contenedor_historia .descripcion{
+    grid-column: 1/span 2;
+    grid-row: 3;
+    font-family: "Hættenschweiler", "Times New Roman";
+    font-size: 1.5vw;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.contenedor_historia:hover .nombre, .contenedor_historia:hover .cargo{
+    color: tomato;
+}
+/* Cuando además de entrar al contenedor, me posiciono por encima de la foto, la misma tiene una animación que hace que se agrande suevementey el cursor se pone en pointer*/
+.contenedor_historia:hover img{
+    transform: scale(1.35);
+    cursor: pointer;
+}
+.contenedor_historia:hover .descripcion{
+    font-weight: bold;
+}
+/* ------------------------------------------------- */
