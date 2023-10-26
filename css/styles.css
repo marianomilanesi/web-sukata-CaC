@@ -5,6 +5,8 @@
 
  /* LETRA: La letra se estableció en color blanco con un selector universal para ques e vea sobre un fonde de página negro. Para otros colores e letra se establecen en selectores de mayor especificidad */
  * {
+    margin: 3px;
+    padding: 3px;
     color: white;
 }
 
