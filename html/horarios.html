@@ -27,10 +27,27 @@
         <div class="contenedor_titulo_header">
             <img class="logoizq" src="https://sukatabjj.com/img/logosukata.png" alt="Logo Sukata">
             <span class="animate__animated animate__rubberBand">Sukata Fight Club</span>
-            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol" width="70px">
+            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol">
         </div>
-        <!--Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
+        
         <nav>
+            <!-- Menú tipo hamburguesa para dispsitivos chicos (celulares). Acá se evita el uso de flaticón pen nav para optimizar el espacio -->
+            <div class="hamburguesa_nav">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <div class="menu">
+                    <ul>
+                        <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                        <li><a href="/html/index.html">⚫ Inicio</a></li>
+                        <li><a href="/html/historia.html">⚫ Historia</a></li>
+                        <li><a href="/html/profesores.html">⚫ Profesores</a></li>
+                        <li><a href="/html/horarios.html">⚫ Horarios</a></li>
+                        <li><a href="/html/contacto.html">⚫ Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Menú clásico para dispositivos grandes y medianos (noteook y tablet). Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
             <div class="barra_nav">
                 <a href="/html/index.html">Inicio
                     <img class="animate__animated animate__rubberBand"
@@ -56,8 +73,7 @@
 
         </nav>
     </header>
-
-
+    
     <main>
         <!--Tabla con horaios-->
         <section class="tabla">
@@ -139,6 +155,7 @@
             <p>Esta es conocida como la modalidad tradicional del Jiu Jitsu, en donde se enseñan y se asientan las bases
             del BJJ. Este se enfoca en:
                 <ul>
+ <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
                     <li><strong>🥋 Uso de Uniforme (Gi)</strong>: En el Jiu-Jitsu con Gi, los practicantes usan un uniforme
                     similar a un kimono, que consta de un chaqueta, pantalones y un cinturón. El Gi proporciona agarres y asas adicionales, lo que permite a los luchadores agarrar la ropa de su oponente para ejecutar técnicas de estrangulación, llaves articulares y control.
                     </li>
@@ -150,6 +167,7 @@
             
             <h2>Jiu jitsu - sin GI (No-GI)</h2>
             <ul>
+                <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
                 <li><strong>🥊 Sin Uniforme Específico</strong>: En el Jiu-Jitsu sin Gi, los practicantes no usan el kimono. En cambio,
                     usan ropa deportiva ajustada, como rashguards y pantalones cortos o mallas. Esto elimina la posibilidad de agarrar la ropa del oponente.
                 </li>
@@ -162,7 +180,7 @@
 
     </main>
 
-    <!-- Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto -->
+    <!-- Para el FOOTER: Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto, los cuales se presonalizaron antes de ser descargados para que el color siga la línea del sitio. Se usa el atributo target para configurar que abra sobre otra pestaña-->
     <footer>
         <h1>Contacto</h1>
         <div>

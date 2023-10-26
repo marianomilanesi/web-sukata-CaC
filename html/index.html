@@ -27,10 +27,27 @@
         <div class="contenedor_titulo_header">
             <img class="logoizq" src="https://sukatabjj.com/img/logosukata.png" alt="Logo Sukata">
             <span class="animate__animated animate__rubberBand">Sukata Fight Club</span>
-            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol" width="70px">
+            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol">
         </div>
-        <!--Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
+        
         <nav>
+            <!-- Menú tipo hamburguesa para dispsitivos chicos (celulares). Acá se evita el uso de flaticón pen nav para optimizar el espacio -->
+            <div class="hamburguesa_nav">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <div class="menu">
+                    <ul>
+                        <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                        <li><a href="/html/index.html">⚫ Inicio</a></li>
+                        <li><a href="/html/historia.html">⚫ Historia</a></li>
+                        <li><a href="/html/profesores.html">⚫ Profesores</a></li>
+                        <li><a href="/html/horarios.html">⚫ Horarios</a></li>
+                        <li><a href="/html/contacto.html">⚫ Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Menú clásico para dispositivos grandes y medianos (noteook y tablet). Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
             <div class="barra_nav">
                 <a href="/html/index.html">Inicio
                     <img class="animate__animated animate__rubberBand"
@@ -57,13 +74,12 @@
         </nav>
     </header>
 
-
     <main>
         <!-- Seccion presentacion -->
         <section class="presentacion">
             <h1>Academia Fight Club Sukata Brothers</h1>
             <div class="contenedor_presentacion">
-                <img src="/img/Sukata-Team.jfif" alt="Sukata-Team">
+                <div class="imagen"><img src="/img/Sukata-Team.jfif" alt="Sukata-Team"></div>
                 <p>Fundada con la visión de promover el crecimiento personal, la disciplina y el respeto a través de las
                     artes marciales, esta academia se ha convertido en un faro de inspiración para entusiastas de todas
                     las edades y niveles de habilidad. Comprometida con la comunidad local, la academia Fight Club
@@ -200,7 +216,7 @@
         </section>
     </main>
 
-    <!-- Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto -->
+    <!-- Para el FOOTER: Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto, los cuales se presonalizaron antes de ser descargados para que el color siga la línea del sitio. Se usa el atributo target para configurar que abra sobre otra pestaña-->
     <footer>
         <h1>Contacto</h1>
         <div>

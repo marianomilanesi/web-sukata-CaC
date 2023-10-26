@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Russo+One&family=Titillium+Web:wght@200&display=swap"
         rel="stylesheet">
-    <!-- Link a animate (animación) -->
+    <!-- Link a Animate (animación) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -27,10 +27,27 @@
         <div class="contenedor_titulo_header">
             <img class="logoizq" src="https://sukatabjj.com/img/logosukata.png" alt="Logo Sukata">
             <span class="animate__animated animate__rubberBand">Sukata Fight Club</span>
-            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol" width="70px">
+            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol">
         </div>
-        <!--Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
+        
         <nav>
+            <!-- Menú tipo hamburguesa para dispsitivos chicos (celulares). Acá se evita el uso de flaticón pen nav para optimizar el espacio -->
+            <div class="hamburguesa_nav">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <div class="menu">
+                    <ul>
+                        <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                        <li><a href="/html/index.html">⚫ Inicio</a></li>
+                        <li><a href="/html/historia.html">⚫ Historia</a></li>
+                        <li><a href="/html/profesores.html">⚫ Profesores</a></li>
+                        <li><a href="/html/horarios.html">⚫ Horarios</a></li>
+                        <li><a href="/html/contacto.html">⚫ Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Menú clásico para dispositivos grandes y medianos (noteook y tablet). Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
             <div class="barra_nav">
                 <a href="/html/index.html">Inicio
                     <img class="animate__animated animate__rubberBand"
@@ -57,12 +74,11 @@
         </nav>
     </header>
 
-
     <main>
         <!-- Profesores de la academia -->
         <section class="contenedor_profesores">
             <h1>Profesores de la Academia</h1>
-            <!-- Sobre los enlaces de instagram se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visulizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto -->
+            <!-- Sobre los enlaces de instagram de cada profesor se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visulizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto. Se usa el atributo target para configurar que abra sobre otra pestaña -->
             <div class="contenedor_tarjeta">
                 <img src="/img/prof_Lula.png" alt="prof_Lula">
                 <h2>Luis Norberto Luengo</h2>
@@ -76,18 +92,13 @@
                     <li>Árbitro internacional de Muay Thay y Kickboxing certificado por WBC e ISKA</li>
                     <li>Árbitro oficial del circuito de MMA (CAM)</li>
                 </ul>
-                <a class="instagram" href="https://www.instagram.com/lula_sukata_brothers_argentina/"
-                    title="@lula_sukata_brothers_argentina" target="_blank"><i
-                        class="fa-brands fa-square-instagram fa-2xl" style="color: #e64533;"></i></i> Instagram</a> <br>
+                <a class="instagram" href="https://www.instagram.com/lula_sukata_brothers_argentina/" title="@lula_sukata_brothers_argentina" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #e64533;"></i></i>   Instagram</a> <br>
             </div>
-
+        
             <div class="contenedor_tarjeta">
                 <img src="/img/prof_Ivan.png" alt="prof_ivan">
                 <h2>Ivan Zaninovich</h2>
-                <p>Ivan durante un tiempo aproximado a 6 meses estuvo entrenando con el mestre Mario Sukata en Sukta HQ,
-                    en Reino Unido. Allí no solo pudo entrenar y competir contra personas de otros paises a su mas alto
-                    rendmiento, sino que tambien dio clases de Jiu Jitsu y MMA. En muy poco tiempo en Reino Unido, pudo
-                    conseguir en competencia como el Open de UE poder recibir el 2do puesto en su categoría</p>
+                <p>Ivan durante un tiempo aproximado a 6 meses estuvo entrenando con el mestre Mario Sukata en Sukta HQ, en Reino Unido. Allí no solo pudo entrenar y competir contra personas de otros paises a su mas alto rendmiento, sino que tambien dio clases de Jiu Jitsu y MMA. En muy poco tiempo en Reino Unido, pudo conseguir en competencia como el Open de UE poder recibir el 2do puesto en su categoría</p>
                 <ul>
                     <li>Faixa Marrom</li>
                     <li>Competidor 2do puesto Open UE</li>
@@ -95,16 +106,13 @@
                     <li>Profesor turno mañana </li>
                     <li>Profesor NoGi</li>
                 </ul>
-                <a class="instagram" href="https://www.instagram.com/ivan.zany/?img_index=1" title="@ivan.zany"
-                    target="_blank"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #e64533;"></i></i>
-                    Instagram</a><br>
+                <a class="instagram" href="https://www.instagram.com/ivan.zany/?img_index=1" title="@ivan.zany" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #e64533;"></i></i>   Instagram</a><br>
             </div>
-
+            
             <div class="contenedor_tarjeta">
                 <img src="/img/prof_Paula.png" alt="prof_Paula">
                 <h2>Paula Seren</h2>
-                <p>Paula es Profesora de Educ. física e instructora Faixa Marrom. Actualmente Paula es preparadora
-                    fisica de diversos competidores haciendo que estos logren sus objetivos fisicos, varios de ellos llegando al podio en sus repsectivas disciplinas</p>
+                <p>Paula es Profesora de Educ. física e instructora de Brown Belt</p>
                 <ul>
                     <li>Profesora de Educacion fisica</li>
                     <li>Intructora de Jiu Jitsu</li>
@@ -113,17 +121,11 @@
                     <li>Competidora Powerlifting</li>
                     <li>Competidora Primal Wars</li>
                 </ul>
-                <a class="instagram" href="https://www.instagram.com/paula.seren/?img_index=1" title="@paula.seren"
-                    target="_blank"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #e64533;"></i></i>
-                    Instagram</a><br>
+                <a class="instagram" href="https://www.instagram.com/paula.seren/?img_index=1" title="@paula.seren" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #e64533;"></i></i>   Instagram</a><br>
             </div>
-
-
-
-
     </main>
 
-    <!-- Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto -->
+    <!-- Para el FOOTER: Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto, los cuales se presonalizaron antes de ser descargados para que el color siga la línea del sitio. Se usa el atributo target para configurar que abra sobre otra pestaña-->
     <footer>
         <h1>Contacto</h1>
         <div>
