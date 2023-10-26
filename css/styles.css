@@ -684,6 +684,8 @@ fieldset textarea {
     margin-bottom: 1%;
     border-radius: 5px;
     box-sizing: border-box;
+    color: black;
+    font-weight: bold;
 }
 fieldset button[type="submit"] {
     background-color: tomato;
