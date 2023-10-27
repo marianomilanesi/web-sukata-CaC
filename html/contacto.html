@@ -78,29 +78,43 @@
         <!-- Seccion formulario -->
         <section class="formulario">
             <h1>Formulario de contacto</h1>
-            <fieldset>
-                <!-- nombre y apellido -->
-                <legend>Datos de contacto</legend>
-                <label for="lbl_nom">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre completo"><br>
+            <form id="formularioContacto">
+                <fieldset>
+                    <!-- nombre y apellido -->
+                    <legend>Datos de contacto</legend>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required><br>
 
-                <label for="lbl_ape">Apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido completo"><br>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name "apellido" id="apellido" placeholder="Apellido completo" required><br>
 
-                <!-- Horario de clase -->
-                <label for="lbl_horario">Horario</label>
-                <input type="radio" name="rdb_Hmañana" id="1">Mañana
-                <input type="radio" name="rdb_Htarde" id="2">Tarde
-                <input type="radio" name="rdb_Hnoche" id="3">Noche <br><br>
+                    <label for="email">email</label>
+                    <input type="text" name "email" id="email" placeholder="tuemail@email.com" required><br>
 
-                <!-- caja de mensaje -->
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mensaje" cols="20" rows="4"></textarea>
-                <button type="submit">Enviar</button>
-            </fieldset>
+                    <!-- Horario de clase -->
+                    <label>Horario</label>
+                    <input type="radio" name="horario" id="mañana" value="Mañana"> Mañana
+                    <input type="radio" name="horario" id="tarde" value="Tarde"> Tarde
+                    <input type="radio" name="horario" id="noche" value="Noche"> Noche <br><br>
+
+                    <!-- caja de mensaje -->
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" cols="20" rows="4"></textarea>
+                    
+
+                    <!-- ReCaptcha -->
+                    
+                    <div class="g-recaptcha" data-sitekey="6Lds7NEoAAAAAJfzDJpTP7nJ0Jz9o1Lv5uncRPss"></div>
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+            <div id="mensajeError" style="color: red; display: none;">Por favor, complete todos los campos.</div>
+
         </section>
 
-        <!-- Seccion mapa: uso de ifaame-->
+        <!-- Seccion mapa: uso de iframe-->
         <section class="mapa">
             <h1>Ubicación</h1>
             <iframe
@@ -109,6 +123,7 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
+
 
     <!-- Para el FOOTER: Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto, los cuales se presonalizaron antes de ser descargados para que el color siga la línea del sitio. Se usa el atributo target para configurar que abra sobre otra pestaña-->
     <footer>
